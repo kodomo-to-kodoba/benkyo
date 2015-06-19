@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>勉強</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+
+<form class="container" style="max-width: 350px;">
+  <div class="form-group">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/3/32/Dark_apple.png">
+    <a href="https://commons.wikimedia.org/wiki/File:Dark_apple.png">
+    </a>
+  </div>
+
+  <div class="form-group">
+
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary btn-lg active" data-lang="deu">
+        <input type="radio" name="lang">Deutsch
+      </label>
+      <label class="btn btn-primary btn-lg" data-lang="jpn">
+        <input type="radio" name="lang">日本語
+      </label>
+    </div>
+
+    <button type="button" class="btn btn-lg btn-success"
+            data-toggle="tooltip">Lösung
+    </button>
+  </div>
+
+  <div class="form-group has-feedback">
+    <input class="form-control" type="text" />
+    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  </div>
+</form>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    'use strict';
+
+    function getText(key) {
+      var lang = $(document).data('lang');
+
+      switch (key) {
+        case 'solution':
+          switch (lang) {
+            case 'deu':
+              return 'Lösung';
+            case 'jpn':
+              return '解答';
+            default:
+              return undefined;
+          }
+        case 'apple':
+        {
+          switch (lang) {
+            case 'deu':
+              return '林檎';
+            case 'jpn':
+              return 'Apfel';
+            default:
+              return undefined;
+          }
+        }
+        default:
+          return undefined;
+      }
+
+    }
+
+    function validate() {
+      var answer = $('input[type="text"]');
+      answer.parent().removeClass('has-error has-success')
+
+      if (answer.val() === getText('apple')) {
+        answer.parent().addClass('has-success');
+        $('.glyphicon-ok').show();
+        $('.glyphicon-remove').hide();
+      } else {
+        answer.parent().addClass('has-error');
+        $('.glyphicon-ok').hide();
+        $('.glyphicon-remove').show();
+      }
+    }
+
+    $('img')
+      .popover({
+        title: function() {
+          return getText('solution');
+        },
+        content: function() {
+          return getText('apple');
+        },
+        placement: 'right'
+      });
+
+    $('label').on('click', function() {
+      $(document).data('lang', $(this).data('lang'));
+      $('button').text(getText('solution'));
+      validate();
+    });
+
+    $('button')
+      .on('click', function() {
+        $('img').popover('show');
+      })
+      .on('mouseleave', function() {
+        $('img').popover('hide');
+      });
+
+    $('input[type="text"]').on('keyup', function() {
+      validate();
+    });
+
+    $(document).data('lang', 'deu');
+    validate();
+  });
+</script>
+
+</body>
+</html>
