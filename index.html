@@ -119,7 +119,9 @@
         $('img').popover('show');
       })
       .on('mouseleave', function() {
-        $('img').popover('hide');
+        setTimeout(function() {
+          $('img').popover('hide');
+        }, 1000);
       });
 
     $('input[type="text"]').on('keyup', function() {
