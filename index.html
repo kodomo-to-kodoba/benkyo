@@ -30,27 +30,32 @@
         <ul>
           <li>
             <md-button class="md-raised md-primary">
-              <i class="material-icons">local_library</i> Lernen
+              <i class="material-icons">local_library</i>
+              {{ 'benkyo.learn' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
-              <i class="material-icons">school</i> Üben
+              <i class="material-icons">school</i>
+              {{ 'benkyo.practice' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
-              <i class="material-icons">poll</i> Auswertung
+              <i class="material-icons">poll</i>
+              {{ 'benkyo.score' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
-              <i class="material-icons">settings</i> Einstellungen
+              <i class="material-icons">settings</i>
+              {{ 'benkyo.settings' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
-              <i class="material-icons">info_outline</i> Impressum
+              <i class="material-icons">info_outline</i>
+              {{ 'benkyo.imprint' | translate }}
             </md-button>
           </li>
         </ul>
@@ -58,16 +63,23 @@
 
     </md-sidenav>
 
-    <md-content flex layout-padding>
+    <md-content style="padding: 1rem; width: 100%;">
 
-      <div layout="column" layout-fill layout-align="top center">
-        <p>
-          The left sidenav will 'lock open' on a medium (>=960px wide) device.
-        </p>
+      <h2>{{ 'benkyo.settings' | translate }}</h2>
 
+      <div ng-controller="LangCtrl">
+        <h3>{{ 'benkyo.language' | translate }}</h3>
+
+        <button class="md-button md-raised" ng-click="changeLang('jpn')">
+          日本語
+        </button>
+        <button class="md-button md-raised" ng-click="changeLang('eng')">
+          English
+        </button>
+        <button class="md-button md-raised" ng-click="changeLang('deu')">
+          Deutsch
+        </button>
       </div>
-
-      <div flex></div>
 
     </md-content>
 
@@ -76,6 +88,8 @@
 </div>
 
 <script src="bower_components/angular/angular.min.js"></script>
+<script
+  src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js">
