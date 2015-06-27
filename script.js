@@ -2,7 +2,6 @@ angular
   .module('SidenavDemo', ['ngMaterial'])
   .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log) {
 
-    $scope.toggleLeft = buildToggler('left');
     $scope.toggleRight = buildToggler('right');
 
     /**
@@ -23,13 +22,7 @@ angular
 
   })
   .controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.close = function () {
-      $mdSidenav('left').close()
-        .then(function () {
-          $log.debug("close LEFT is done");
-        });
 
-    };
   })
   .controller('RightCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
