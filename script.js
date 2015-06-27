@@ -1,5 +1,5 @@
 angular
-  .module('SidenavDemo', ['ngMaterial'])
+  .module('Benkyo', ['ngMaterial'])
   .controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log) {
 
   })
