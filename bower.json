@@ -1,0 +1,20 @@
+{
+  "name": "benkyo",
+  "version": "0.0.0",
+  "authors": [
+    "winniehell <git@winniehell.de>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "https://kodomo-to-kodoba.github.io/benkyo/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.10.0"
+  }
+}
