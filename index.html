@@ -67,7 +67,7 @@
 
       <h2>{{ 'benkyo.menu.settings' | translate }}</h2>
 
-      <div ng-controller="LangCtrl">
+      <div ng-controller="SettingsController">
         <h3>{{ 'benkyo.menu.language' | translate }}</h3>
 
         <button class="md-button md-raised" ng-click="changeLang('jpn')">
@@ -107,6 +107,10 @@
 <script src="app/menu/menu.module.js"></script>
 <script src="app/menu/config.js"></script>
 <script src="app/menu/menu.controller.js"></script>
+
+<!-- settings module -->
+<script src="app/settings/settings.module.js"></script>
+<script src="app/settings/settings.controller.js"></script>
 
 </body>
 </html>
