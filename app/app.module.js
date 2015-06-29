@@ -2,9 +2,7 @@
   'use strict';
 
   angular.module('app', [
-    'ngMaterial',
-    'ngSanitize',
-    'pascalprecht.translate'
+    'app.core'
   ])
     .config(['$logProvider',
       '$translateProvider',
