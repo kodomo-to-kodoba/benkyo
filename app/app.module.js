@@ -37,9 +37,7 @@
               score: '点数',
               settings: '設定'
             }
-          })
-          .preferredLanguage('deu')
-          .useSanitizeValueStrategy('sanitizeParameters');
+          });
       }
     ])
     .controller('AppCtrl',
