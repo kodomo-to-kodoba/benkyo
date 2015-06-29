@@ -11,6 +11,7 @@
     /*
      * 3rd Party modules
      */
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ui.router'
   ]);
 })();
