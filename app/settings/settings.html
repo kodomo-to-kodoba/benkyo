@@ -1,0 +1,15 @@
+<h2>{{ 'benkyo.menu.settings' | translate }}</h2>
+
+<div ng-controller="SettingsController">
+  <h3>{{ 'benkyo.menu.language' | translate }}</h3>
+
+  <button class="md-button md-raised" ng-click="changeLang('jpn')">
+    日本語
+  </button>
+  <button class="md-button md-raised" ng-click="changeLang('eng')">
+    English
+  </button>
+  <button class="md-button md-raised" ng-click="changeLang('deu')">
+    Deutsch
+  </button>
+</div>

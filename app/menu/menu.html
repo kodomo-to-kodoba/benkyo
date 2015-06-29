@@ -1,0 +1,40 @@
+<md-toolbar>
+  <h1 class="md-toolbar-tools">勉強&nbsp;
+    <small>benkyo</small>
+  </h1>
+</md-toolbar>
+
+<md-content ng-controller="MenuController">
+  <ul>
+    <li>
+      <md-button class="md-raised md-primary">
+        <i class="material-icons">local_library</i>
+        {{ 'benkyo.menu.learn' | translate }}
+      </md-button>
+    </li>
+    <li>
+      <md-button class="md-raised md-primary">
+        <i class="material-icons">school</i>
+        {{ 'benkyo.menu.practice' | translate }}
+      </md-button>
+    </li>
+    <li>
+      <md-button class="md-raised md-primary">
+        <i class="material-icons">poll</i>
+        {{ 'benkyo.menu.score' | translate }}
+      </md-button>
+    </li>
+    <li>
+      <md-button class="md-raised md-primary">
+        <i class="material-icons">settings</i>
+        {{ 'benkyo.menu.settings' | translate }}
+      </md-button>
+    </li>
+    <li>
+      <md-button class="md-raised md-primary">
+        <i class="material-icons">info_outline</i>
+        {{ 'benkyo.menu.imprint' | translate }}
+      </md-button>
+    </li>
+  </ul>
+</md-content>
