@@ -4,7 +4,11 @@
   angular.module('app', [
     'app.core',
     'app.menu',
-    'app.settings'
+    'app.learn',
+    'app.practice',
+    'app.score',
+    'app.settings',
+    'app.imprint'
   ]);
 
 })();

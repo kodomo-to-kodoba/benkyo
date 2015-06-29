@@ -1,22 +1,21 @@
 (function() {
   'use strict';
 
-  var settings = angular.module('app.settings');
-
-  settings.config(configureStates);
+  angular.module('app.score')
+    .config(configureStates);
 
   configureStates.$inject = ['$stateProvider'];
 
   function configureStates($stateProvider) {
     $stateProvider
-      .state('settings', {
-        url: '/settings',
+      .state('score', {
+        url: '/score',
         views: {
           'menu': {
             templateUrl: 'app/menu/menu.html'
           },
           'content': {
-            templateUrl: 'app/settings/settings.html'
+            templateUrl: 'app/score/score.html'
           }
         }
       });
