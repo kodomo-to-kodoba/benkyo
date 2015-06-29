@@ -2,3 +2,8 @@
   text-align: left;
   width: 200px;
 }
+
+body > md-content {
+  padding: 1rem;
+  width: 100%;
+}
