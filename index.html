@@ -26,36 +26,36 @@
         </h1>
       </md-toolbar>
 
-      <md-content ng-controller="MenuCtrl">
+      <md-content ng-controller="Menu">
         <ul>
           <li>
             <md-button class="md-raised md-primary">
               <i class="material-icons">local_library</i>
-              {{ 'benkyo.learn' | translate }}
+              {{ 'benkyo.menu.learn' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
               <i class="material-icons">school</i>
-              {{ 'benkyo.practice' | translate }}
+              {{ 'benkyo.menu.practice' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
               <i class="material-icons">poll</i>
-              {{ 'benkyo.score' | translate }}
+              {{ 'benkyo.menu.score' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
               <i class="material-icons">settings</i>
-              {{ 'benkyo.settings' | translate }}
+              {{ 'benkyo.menu.settings' | translate }}
             </md-button>
           </li>
           <li>
             <md-button class="md-raised md-primary">
               <i class="material-icons">info_outline</i>
-              {{ 'benkyo.imprint' | translate }}
+              {{ 'benkyo.menu.imprint' | translate }}
             </md-button>
           </li>
         </ul>
@@ -65,10 +65,10 @@
 
     <md-content style="padding: 1rem; width: 100%;">
 
-      <h2>{{ 'benkyo.settings' | translate }}</h2>
+      <h2>{{ 'benkyo.menu.settings' | translate }}</h2>
 
       <div ng-controller="LangCtrl">
-        <h3>{{ 'benkyo.language' | translate }}</h3>
+        <h3>{{ 'benkyo.menu.language' | translate }}</h3>
 
         <button class="md-button md-raised" ng-click="changeLang('jpn')">
           日本語
@@ -98,9 +98,15 @@
 </script>
 
 <script src="app/app.module.js"></script>
+
 <!-- core module -->
 <script src="app/core/core.module.js"></script>
 <script src="app/core/config.js"></script>
+
+<!-- menu module -->
+<script src="app/menu/menu.module.js"></script>
+<script src="app/menu/config.js"></script>
+<script src="app/menu/menu.js"></script>
 
 </body>
 </html>
